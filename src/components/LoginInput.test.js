@@ -42,6 +42,7 @@ describe('LoginInput component', () => {
 
   it('should call login function when login button is clicked', async () => {
     // arrange
+    // eslint-disable-next-line no-undef
     const mockLogin = jest.fn();
     render(<LoginInput login={mockLogin} />);
     const emailInput = await screen.getByPlaceholderText('Email');

@@ -55,6 +55,7 @@ describe('RegisterInput component', () => {
 
   it('should call register function when register button clicked', async () => {
     // arrange
+    // eslint-disable-next-line no-undef
     const mockRegister = jest.fn();
     render(<RegisterInput register={mockRegister} />);
     const usernameInput = await screen.getByPlaceholderText('Name');
