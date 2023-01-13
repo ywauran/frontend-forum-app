@@ -10,9 +10,9 @@ function RegisterInput({ register }) {
 
   return (
     <form className="flex flex-col space-y-4">
-      <input type="text" value={name} onChange={onNameChange} placeholder="name" className="input w-full" />
-      <input type="email" value={email} onChange={onEmailChange} placeholder="Email Address" className="input w-full" />
-      <input type="password" value={password} onChange={onPasswordChange} placeholder="Email Address" className="input w-full" />
+      <input type="text" value={name} onChange={onNameChange} placeholder="Name" className="input w-full" />
+      <input type="email" value={email} onChange={onEmailChange} placeholder="Email" className="input w-full" />
+      <input type="password" value={password} onChange={onPasswordChange} placeholder="Password" className="input w-full" />
       <button className="btn btn-primary w-full" onClick={() => register({ name, email, password })}>Register</button>
     </form>
   );
