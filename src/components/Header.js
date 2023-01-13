@@ -2,9 +2,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MdLogout } from 'react-icons/md';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 function Header({ authUser, signOut }) {
   const { id, avatar, name } = authUser;
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   return (
     <section className="flex justify-between px-6 py-4 items-center" style={{ boxShadow: '0 1px 8px -3px rgba(0, 0, 0, 0.7)' }}>
@@ -16,8 +32,31 @@ function Header({ authUser, signOut }) {
         <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
           <img src={avatar} alt={id} title={name} />
         </div>
-        <button className="hover:text-primary" type="button" onClick={signOut}><MdLogout className="text-2xl" /></button>
+        <button className="hover:text-primary" type="button" onClick={handleClickOpen}><MdLogout className="text-2xl" /></button>
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title" align="center">
+          Keluar
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Anda yakin ingin keluar ?
+          </DialogContentText>
+        </DialogContent>
+        <div className="flex items-center justify-center">
+          <DialogActions>
+            <Button onClick={handleClose}>Tidak</Button>
+            <Button onClick={signOut} autoFocus>
+              Ya
+            </Button>
+          </DialogActions>
+        </div>
+      </Dialog>
     </section>
   );
 }
