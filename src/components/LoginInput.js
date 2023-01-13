@@ -1,11 +1,11 @@
 /* eslint-disable react/button-has-type */
-import React from "react";
-import PropTypes from "prop-types";
-import useInput from "../hooks/useInput";
+import React from 'react';
+import PropTypes from 'prop-types';
+import useInput from '../hooks/useInput';
 
 function LoginInput({ login }) {
-  const [email, onEmailChange] = useInput("");
-  const [password, onPasswordChange] = useInput("");
+  const [email, onEmailChange] = useInput('');
+  const [password, onPasswordChange] = useInput('');
 
   return (
     <form className="flex flex-col space-y-4">
