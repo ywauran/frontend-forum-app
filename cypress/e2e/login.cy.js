@@ -76,7 +76,7 @@ describe('Login spec', () => {
 
     // memverifikasi bahwa elemen yang berada di homepage ditampilkan
     cy.get('header')
-      .contains(/^Forum pp$/)
+      .contains(/^Forum App$/)
       .should('be.visible');
   });
 });
