@@ -24,6 +24,7 @@ function LoginInput({ login }) {
         className="input w-full"
       />
       <button
+        type="button"
         className="btn btn-primary w-full"
         onClick={() => login({ email, password })}
       >
