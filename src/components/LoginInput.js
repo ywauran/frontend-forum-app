@@ -14,18 +14,18 @@ function LoginInput({ login }) {
         value={email}
         onChange={onEmailChange}
         placeholder="Email"
-        className="input w-full"
+        className="w-full input input-bordered"
       />
       <input
         type="password"
         value={password}
         onChange={onPasswordChange}
         placeholder="Password"
-        className="input w-full"
+        className="w-full input input-bordered"
       />
       <button
         type="button"
-        className="btn btn-primary w-full"
+        className="w-full btn btn-primary"
         onClick={() => login({ email, password })}
       >
         Login

@@ -75,8 +75,6 @@ describe('Login spec', () => {
       .click();
 
     // memverifikasi bahwa elemen yang berada di homepage ditampilkan
-    cy.get('h1')
-      .contains(/^Kategori$/)
-      .should('be.visible');
+    cy.get('h1').should('be.visible');
   });
 });

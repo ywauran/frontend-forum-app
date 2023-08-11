@@ -6,8 +6,8 @@ function LeaderboardList({ leaderboards }) {
   return (
     <div className="flex items-center justify-center">
       <table className="w-96">
-        <thead>
-          <tr>
+        <thead className="p-2 ">
+          <tr className="p-4">
             <th className="text-left">Pengguna</th>
             <th className="text-left">Skor</th>
           </tr>
