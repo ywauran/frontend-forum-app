@@ -26,12 +26,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "set PORT=3001 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "e2e": "cypress run",
-    "ci:test": "react-scripts test --watchAll=false && start-server-and-test start http-get://0.0.0.0:3001 e2e"
+    "ci:test": "react-scripts test --watchAll=false && start-server-and-test start http-get://0.0.0.0:3000 e2e"
   },
   "eslintConfig": {
     "extends": [

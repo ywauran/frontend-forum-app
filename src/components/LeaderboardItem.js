@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function LeaderboardItem({ user, score }) {
   return (
-    <tr className="py-4">
-      <td className="flex space-x-6 items-center">
-        <div className="avatar py-4">
-          <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+    <tr className="px-4 py-4 shadow ">
+      <td className="flex items-center space-x-6">
+        <div className="p-4 avatar">
+          <div className="w-20 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
             <img className="" src={user.avatar} alt={user.name} />
           </div>
         </div>
@@ -16,7 +16,7 @@ function LeaderboardItem({ user, score }) {
         </div>
       </td>
       <td className="">
-        <p className="text-center font-semibold">{score}</p>
+        <p className="font-semibold text-center">{score}</p>
       </td>
     </tr>
   );
